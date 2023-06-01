@@ -1,0 +1,41 @@
+# Copyright (c) 2023, irsaa_report and contributors
+# For license information, please see license.txt
+
+# Copyright (c) 2015, Frappe Technologies Pvt. Ltd. and Contributors
+# For license information, please see license.txt
+
+
+import frappe
+from frappe import _
+from frappe.model import no_value_fields
+from frappe.model.document import Document
+from frappe.utils import cint, flt
+
+
+class BOQ(Document):
+
+	@frappe.whitelist()
+	def get_items(self):
+		self.set("items", [])
+
+		#custom_fields = frappe.get_meta("Item").get_custom_fields()
+
+		#dn_details = self.get_details_for_item()[0]
+		for item in frappe.get_all("Item", {"}):
+			item = {
+			"item_code": item
+				ch = self.append("items", {})
+				ch.item_code = item.item_code
+				ch.item_name = item.item_name
+				ch.uom = item.stock_uom
+				ch.item_group = item.item_group
+				
+				
+
+				# copy custom fields
+				for d in custom_fields:
+					if item.get(d.fieldname):
+						ch.set(d.fieldname, item.get(d.fieldname))
+
+		#self.update_item_details()
+ 

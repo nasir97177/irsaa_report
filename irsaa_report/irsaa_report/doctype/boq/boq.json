@@ -1,0 +1,90 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "By \"Naming Series\" field",
+ "creation": "2023-05-30 13:10:16.872469",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "project",
+  "column_break_hhg9v",
+  "posting__date",
+  "amended_from",
+  "section_break_aucpy",
+  "get_items_groups",
+  "item_group",
+  "get_items",
+  "items"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "BOQ-.YY.-.#####"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "column_break_hhg9v",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "posting__date",
+   "fieldtype": "Date",
+   "label": "Posting  Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "BOQ",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_aucpy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "item_group",
+   "fieldtype": "Table MultiSelect",
+   "label": "Item Group",
+   "options": "Item Group item"
+  },
+  {
+   "fieldname": "get_items",
+   "fieldtype": "Button",
+   "label": "Get Items"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "BOQ Child"
+  },
+  {
+   "fieldname": "get_items_groups",
+   "fieldtype": "Button",
+   "label": "Get Items Groups"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-01 16:15:35.821430",
+ "modified_by": "Administrator",
+ "module": "Irsaa Report",
+ "name": "BOQ",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
